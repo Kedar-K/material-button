@@ -41,4 +41,4 @@ Your application is already set up to be tested via [web-component-tester](https
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](https://github.com/Kedar-K/material-button/blob/master/LICENSE)

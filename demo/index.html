@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>material-button demo</title>
+
+  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../material-button.html">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Josefin+Slab|Jura|Kanit|Raleway" rel="stylesheet">
+
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+    material-button {
+    margin: 25px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Kanit', sans-serif;
+
+  }
+
+  body {
+    font-family: 'Jura', sans-serif;
+  }
+    </style>
+  </custom-style>
+</head>
+
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic material-button demo</h3>
+    <demo-snippet>
+      <template>
+        <h3>Basic button functionality</h3>
+        <material-button>Button</material-button>
+        <material-button disabled>Button</material-button>
+
+
+        <h3>Add some colours to it?</h3>
+        <material-button red>Button</material-button>
+        <material-button blue>Button</material-button>
+        <material-button yellow>Button</material-button>
+        <material-button green>Button</material-button>
+        <material-button orange>Button</material-button>
+        <material-button purple>Button</material-button>
+
+
+        <h3>Disable the coloured buttons</h3>
+        <material-button red disabled>Button</material-button>
+        <material-button blue disabled>Button</material-button>
+        <material-button yellow disabled>Button</material-button>
+        <material-button green disabled>Button</material-button>
+        <material-button orange disabled>Button</material-button>
+        <material-button purple disabled>Button</material-button>
+
+      </template>
+    </demo-snippet>
+  </div>
+</body>
+
+</html>

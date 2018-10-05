@@ -1,0 +1,173 @@
+<!--
+`material-button`
+This is a material button with the gradient colours with the nice animations on hover 
+
+@demo demo/index.html
+-->
+<template id="material-button">
+  <style>
+  :host {
+     display: inline-block;
+     box-sizing: border-box;
+     margin: 0px;
+     min-height: 30px;
+     text-align: center;
+     font: inherit;
+     transition: box-shadow 0.3s ease-in-out;
+     background: linear-gradient(60deg, #546E7A, #CFD8DC);
+     box-shadow: 1px 1px 1px rgba(0,0,0,0.12), 1px 1px 1px rgba(0,0,0,0.24);
+     outline-width: 0;
+     font-family: monospace;
+     color: aliceblue;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     -webkit-user-select: none;
+     user-select: none;
+     cursor: pointer;
+     -webkit-touch-callout: none;
+     -webkit-tap-highlight-color: rgba(0,0,0,0);
+     z-index: 0;
+     border-radius: 2px;
+     padding: 0.4em 1.6em;
+     -webkit-transition: background 200ms ease-in;
+     -moz-transition: background 200ms ease-in;
+     -ms-transition: background 200ms ease-in;
+     -o-transition: background 200ms ease-in;
+     transition: background 200ms ease-in;
+     @apply(--material-button);
+   }
+ :host(:hover) {
+   box-shadow: 2px 3px 4px rgba(0,0,0,0.12), 2px 4px 5px rgba(0,0,0,0.24);
+   transition: 200ms ease-in;
+ }
+ :host(:active){
+   box-shadow: 1px 1px 1px rgba(0,0,0,0.12), 1px 1px 1px rgba(0,0,0,0.24);
+ }
+ :host([red]){
+   background: #b71c1c; /* Old browsers */
+   background: -moz-linear-gradient(45deg, #b71c1c 0%, #ef5350 60%, #ef5350 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg, #b71c1c 0%,#ef5350 60%,#ef5350 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg, #b71c1c 0%,#ef5350 60%,#ef5350 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b71c1c', endColorstr='#ef5350',GradientType=1 );
+ }
+
+ :host([blue]){
+   background: #01579b; /* Old browsers */
+   background: -moz-linear-gradient(45deg, #01579b 0%, #03a9f4 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg, #01579b 0%,#03a9f4 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg, #01579b 0%,#03a9f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01579b', endColorstr='#03a9f4',GradientType=1 );
+ }
+
+ :host([yellow]){
+   background: #f57f17; /* Old browsers */
+   background: -moz-linear-gradient(45deg, #f57f17 0%, #ffeb3b 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg, #f57f17 0%,#ffeb3b 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg, #f57f17 0%,#ffeb3b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f57f17', endColorstr='#ffeb3b',GradientType=1 );
+ }
+
+ :host([purple]){
+   background: #4527a0; /* Old browsers */
+   background: -moz-linear-gradient(45deg, #4527a0 0%, #9575cd 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg, #4527a0 0%,#9575cd 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg, #4527a0 0%,#9575cd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4527a0', endColorstr='#9575cd',GradientType=1 );
+ }
+
+ :host([orange]){
+   background: #ff6e40; /* Old browsers */
+   background: -moz-linear-gradient(45deg, #ff6e40 0%, #ff3d00 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg, #ff6e40 0%,#ff3d00 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg, #ff6e40 0%,#ff3d00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6e40', endColorstr='#ff3d00',GradientType=1 );
+ }
+
+ :host([green]){
+   background: #4caf50; /* Old browsers */
+   background: -moz-linear-gradient(45deg, #4caf50 0%, #aeea00 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg, #4caf50 0%,#aeea00 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg, #4caf50 0%,#aeea00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4caf50', endColorstr='#aeea00',GradientType=1 );
+ }
+
+ :host([disabled]:hover){
+   box-shadow: 1px 1px 1px rgba(0,0,0,0.12), 1px 1px 1px rgba(0,0,0,0.24);
+   cursor:not-allowed;
+ }
+
+
+  </style>
+  <content><span id="prop1"></span></content>
+</template>
+
+<script>
+  (() => {
+    'use strict';
+
+    // Retrieve template from current script's document owner.
+    const doc = document.currentScript.ownerDocument;
+    const template = doc.querySelector('template#material-button');
+
+    class MaterialButton extends HTMLElement {
+
+      static get observedAttributes() {
+        return ['prop1'];
+      }
+
+      attributeChangedCallback(name, old, value) {
+        if (old !== value) {
+          this[name] = value;
+        }
+      }
+
+      constructor() {
+        super();
+
+        /**
+         * @type {!Object}
+         * @private
+         */
+        this._properties = {
+          prop1: this.textContent,
+        };
+      }
+
+      /**
+       * @property {string|null} prop1
+       */
+      get prop1() {
+        return this._properties.prop1;
+      }
+
+      set prop1(val) {
+        if (val !== this.prop1) {
+          this._properties.prop1 = val;
+          this._updateRendering();
+        }
+      }
+
+      connectedCallback() {
+        // Lazy creation of shadowRoot.
+        if (!this.shadowRoot) {
+          this.attachShadow({
+            mode: 'open'
+          }).appendChild(document.importNode(template.content, true));
+        }
+        this._updateRendering();
+      }
+
+      /**
+       * @private
+       */
+      _updateRendering() {
+        // Avoid rendering when not connected.
+        if (this.shadowRoot && this.isConnected) {
+          this.shadowRoot.querySelector('#prop1').textContent = this.prop1;
+        }
+      }
+    }
+
+    customElements.define('material-button', MaterialButton);
+  })();
+</script>
